@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Audiowide', sans-serif;
 }
 
 body {
@@ -10,9 +11,49 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #333;
+  background-image: url('./images/studio-background-concept-dark-gradient-purple-studio-room-background-product.jpg');
+}
+
+#btnContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 640px;
+  
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#blackBtn {
+  background-color: #333;
+  color: red;
+  box-shadow: 5px 5px 8px darkred, 10px 10px 8px darkblue, 15px 15px 8px orangered;
+}
+
+#blackBtn:hover {
+  background-color: black;
+}
+
+#rgbBtn {
+  background-color: green;
+  color: yellow;
+  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+}
+
+#rgbBtn:hover {
+  background-color: orangered;
+}
+
+#eraseAllBtn,
+#eraseOneByOne {
+  background-color: blanchedalmond;
+  color: darkred;
+  box-shadow: 5px 5px 8px darkred, 10px 10px 8px orangered, 15px 15px 8px orange;
 }
 
 .divsBlack {

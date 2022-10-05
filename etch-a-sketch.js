@@ -12,7 +12,8 @@ container.style.maxWidth = '600px';
 container.style.maxHeight = '600px';
 container.style.width = '100%';
 container.style.height = '100%';
-container.style.boxShadow = '10px 10px 10px 10px';
+container.style.boxShadow = '5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green';
+container.style.backgroundColor = '#FFFFFF';
 
 const gridInit = () => {
   for (let i = 1; i < 17; i++) {
