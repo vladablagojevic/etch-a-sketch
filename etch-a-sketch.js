@@ -1,9 +1,10 @@
-let container = document.getElementById('container');
+const container = document.getElementById('container');
 const blackBtn = document.getElementById('blackBtn');
 const rgbBtn = document.getElementById('rgbBtn');
 const eraseAllBtn = document.getElementById('eraseAllBtn');
 const newGridBtn =  document.getElementById('newGridBtn');
 const eraseOneByOneBtn = document.getElementById('eraseOneByOne');
+const colorPicker = document.getElementById('colorPicker');
 let div = null;
 
 const gridInit = () => {
@@ -54,6 +55,15 @@ eraseOneByOneBtn.addEventListener('click', () => {
   Array.from(divs).forEach(element => {
     element.addEventListener('mouseenter', () => {
       element.style.backgroundColor = 'white';
+    });
+  });
+});
+
+colorPicker.addEventListener('change', (e) => {
+  const color = e.target.value;
+  Array.from(divs).forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      element.style.backgroundColor = color;
     });
   });
 });
