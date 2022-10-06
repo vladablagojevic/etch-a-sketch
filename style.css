@@ -97,9 +97,9 @@ button {
 }
 
 #newGridBtn {
-  background-color: brown;
+  background-color: #9932CC;
   color: whitesmoke;
-  box-shadow: 5px 5px 8px royalblue, 10px 10px 8px lightblue, 15px 15px 8px gray;
+  box-shadow: 5px 5px 8px #8B008B, 10px 10px 8px #7B68EE, 15px 15px 8px #483D8B;
 }
 
 #newGridBtn:hover {
