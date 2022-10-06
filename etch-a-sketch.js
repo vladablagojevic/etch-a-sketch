@@ -16,12 +16,14 @@ container.style.boxShadow = '5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px 
 container.style.backgroundColor = '#FFFFFF';
 
 const gridInit = () => {
-  for (let i = 1; i < 17; i++) {
+  const initGrid = 16;
+  const divWidthHeight = 600 / initGrid;
+  for (let i = 1; i < initGrid * initGrid; i++) {
     div = document.createElement('div');
     div.id = `div${i}`;
     div.className = 'divs';
-    div.style.width = '25%';
-    div.style.height = '25%';
+    div.style.width = `${divWidthHeight}px`;
+    div.style.height = `${divWidthHeight}px`;
     div.style.border = '1px solid rgba(0,0,0,0.25)';
     container.appendChild(div);
   }
