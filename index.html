@@ -10,15 +10,20 @@
   <script src="etch-a-sketch.js" defer></script>
 </head>
 <body>
-  <button id="newGridBtn">Make new grid</button>
-  
-  <div id="container"></div>
+  <div id="gridContainer">
+    <button id="newGridBtn">Make new grid</button>
+    <div id="container"></div>
+  </div>
 
   <div id="btnContainer">
     <button id="blackBtn">Black</button>
-    <button id="rgbBtn">RGB Colors</button>
-    <button id="eraseAllBtn">Erase all</button>
-    <button id="eraseOneByOne">Erase one by one</button>
+    <button id="rgbBtn">Colorful</button>
+    <button id="eraseAllBtn">Clear</button>
+    <button id="eraseOneByOne">Eraser</button>
+    <div id="colorPickerContainer">
+      <label for="colorPicker">Pick:</label>
+      <input type="color" id="colorPicker">
+    </div>
   </div>
 </body>
 </html>

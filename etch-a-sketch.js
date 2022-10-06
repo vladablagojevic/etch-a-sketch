@@ -6,19 +6,10 @@ const newGridBtn =  document.getElementById('newGridBtn');
 const eraseOneByOneBtn = document.getElementById('eraseOneByOne');
 let div = null;
 
-container.style.display = 'flex';
-container.style.flexWrap = 'wrap';
-container.style.maxWidth = '600px';
-container.style.maxHeight = '600px';
-container.style.width = '100%';
-container.style.height = '100%';
-container.style.boxShadow = '5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green';
-container.style.backgroundColor = '#FFFFFF';
-
 const gridInit = () => {
   const initGrid = 16;
   const divWidthHeight = 600 / initGrid;
-  for (let i = 1; i < initGrid * initGrid; i++) {
+  for (let i = 0; i < initGrid * initGrid; i++) {
     div = document.createElement('div');
     div.id = `div${i}`;
     div.className = 'divs';
