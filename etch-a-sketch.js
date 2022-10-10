@@ -16,7 +16,7 @@ const gridInit = () => {
     div.className = 'divs';
     div.style.width = `${divWidthHeight}px`;
     div.style.height = `${divWidthHeight}px`;
-    div.style.border = '1px solid rgba(0,0,0,0.25)';
+    div.style.border = '1px solid plum';
     container.appendChild(div);
   }
 }
@@ -79,7 +79,7 @@ newGridBtn.addEventListener('click', () => {
       div.style.height = `${widthOfDiv}px`;
       div.id = `div${i}`;
       div.className = 'divs';
-      div.style.border = '1px solid rgba(0,0,0,0.25)';
+      div.style.border = '1px solid plum';
       container.appendChild(div);
     } 
   } else {

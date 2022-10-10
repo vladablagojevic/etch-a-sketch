@@ -54,6 +54,8 @@ body {
 #colorPicker {
   width: 100px;
   height: 50px;
+  border: none;
+  border-radius: 5px;
   box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
 }
 
@@ -66,8 +68,8 @@ button {
 
 #blackBtn {
   background-color: #333;
-  color: red;
-  box-shadow: 5px 5px 8px darkred, 10px 10px 8px darkblue, 15px 15px 8px orangered;
+  color: whitesmoke;
+  box-shadow: 5px 5px 8px #A9A9A9, 10px 10px 8px 	#808080, 15px 15px 8px 	#708090;
 }
 
 #blackBtn:hover {
@@ -86,14 +88,15 @@ button {
 
 #eraseAllBtn,
 #eraseOneByOne {
-  background-color: blanchedalmond;
-  color: darkred;
-  box-shadow: 5px 5px 8px darkred, 10px 10px 8px orangered, 15px 15px 8px orange;
+  background-color: whitesmoke;
+  color: darkslategray;
+  box-shadow: 5px 5px 8px snow, 10px 10px 8px lightgray, 15px 15px 8px darkgray;
+  border: 1px solid silver;
 }
 
 #eraseAllBtn:hover,
 #eraseOneByOne:hover {
-  background-color: red;
+  background-color: white;
 }
 
 #newGridBtn {
