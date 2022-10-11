@@ -53,7 +53,7 @@ body {
 
 #colorPicker {
   width: 100px;
-  height: 50px;
+  height: 20px;
   border: none;
   border-radius: 5px;
   box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
@@ -69,21 +69,25 @@ button {
 #blackBtn {
   background-color: #333;
   color: whitesmoke;
+  border: 1px solid whitesmoke;
   box-shadow: 5px 5px 8px #A9A9A9, 10px 10px 8px 	#808080, 15px 15px 8px 	#708090;
 }
 
 #blackBtn:hover {
   background-color: black;
+  border: 3px solid whitesmoke;
 }
 
 #rgbBtn {
-  background-color: green;
-  color: yellow;
-  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+  background-color: #E6E6FA;
+  color: #FF1493;
+  box-shadow: 5px 5px 8px #FFC0CB, 10px 10px 8px #FF69B4, 15px 15px 8px #DB7093;
+  border: 1px solid #FF1493;
 }
 
 #rgbBtn:hover {
-  background-color: orangered;
+  background-color: #D8BFD8;
+  border: 3px solid #FF1493;
 }
 
 #eraseAllBtn,
@@ -97,16 +101,19 @@ button {
 #eraseAllBtn:hover,
 #eraseOneByOne:hover {
   background-color: white;
+  border: 3px solid silver;
 }
 
 #newGridBtn {
-  background-color: #9932CC;
+  background-color: #7B68EE;
   color: whitesmoke;
   box-shadow: 5px 5px 8px #8B008B, 10px 10px 8px #7B68EE, 15px 15px 8px #483D8B;
+  border: 1px solid #7B68EE;
 }
 
 #newGridBtn:hover {
-  background-color: blueviolet;
+  background-color: 	#9370DB;
+  border: 3px solid #7B68EE;
 }
 
 .divsBlack {
