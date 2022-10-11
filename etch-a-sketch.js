@@ -5,6 +5,7 @@ const eraseAllBtn = document.getElementById('eraseAllBtn');
 const newGridBtn =  document.getElementById('newGridBtn');
 const eraseOneByOneBtn = document.getElementById('eraseOneByOne');
 const colorPicker = document.getElementById('colorPicker');
+const slider = document.getElementById('gridRange');
 let div = null;
 
 const gridInit = () => {
@@ -68,23 +69,36 @@ colorPicker.addEventListener('change', (e) => {
   });
 });
 
-newGridBtn.addEventListener('click', () => {
-  const gridNr = prompt('Enter number between 1 and 100 for grid cells on each side');
-  container.replaceChildren();
-  if (gridNr > 0 && gridNr < 100) {
-    let widthOfDiv = 600 / gridNr;
-    for (let i = 0; i < gridNr * gridNr; i++) {
-      div = document.createElement('div');
-      div.style.width = `${widthOfDiv}px`;
-      div.style.height = `${widthOfDiv}px`;
-      div.id = `div${i}`;
-      div.className = 'divs';
-      div.style.border = '1px solid plum';
-      container.appendChild(div);
-    } 
-  } else {
-    alert('Please enter number between 1 and 100');
+// newGridBtn.addEventListener('click', () => {
+//   const gridNr = prompt('Enter number between 1 and 100 for grid cells on each side');
+//   container.replaceChildren();
+//   if (gridNr > 0 && gridNr < 100) {
+//     let widthOfDiv = 600 / gridNr;
+//     for (let i = 0; i < gridNr * gridNr; i++) {
+//       div = document.createElement('div');
+//       div.style.width = `${widthOfDiv}px`;
+//       div.style.height = `${widthOfDiv}px`;
+//       div.id = `div${i}`;
+//       div.className = 'divs';
+//       div.style.border = '1px solid plum';
+//       container.appendChild(div);
+//     } 
+//   } else {
+//     alert('Please enter number between 1 and 100');
     
-    gridInit();
+//     gridInit();
+//   }
+// });
+
+slider.addEventListener('input', (e) => {
+  container.replaceChildren();
+  let widthOfDiv = 600 / e.target.value;
+  for (let i = 0; i < e.target.value * e.target.value; i++) {
+    div = document.createElement('div');
+    div.style.width = `${widthOfDiv}px`;
+    div.style.height = `${widthOfDiv}px`;
+    div.className = 'divs';
+    div.style.border = '1px solid plum';
+    container.appendChild(div);
   }
 });
