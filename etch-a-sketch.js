@@ -1,36 +1,33 @@
 const container = document.getElementById('container');
-console.log(container.offsetWidth);
+const divs = document.getElementsByClassName('divs');
 const blackBtn = document.getElementById('blackBtn');
 const rgbBtn = document.getElementById('rgbBtn');
 const eraseAllBtn = document.getElementById('eraseAllBtn');
-const newGridBtn =  document.getElementById('newGridBtn');
 const eraseOneByOneBtn = document.getElementById('eraseOneByOne');
 const colorPicker = document.getElementById('colorPicker');
 const slider = document.getElementById('gridRange');
-let div = null;
+const sliderCounter = document.getElementById('sliderCounter');
 
 const gridInit = (initGrid) => {
   const divWidthHeight = 600 / initGrid;
+  sliderCounter.textContent = `Grid size: ${initGrid} X ${initGrid}`;
   for (let i = 0; i < initGrid * initGrid; i++) {
-    div = document.createElement('div');
-    div.id = `div${i}`;
+    let div = document.createElement('div');
     div.className = 'divs';
+    // div.addEventListener('mouseover', colorDiv);
     div.style.width = `${divWidthHeight}px`;
     div.style.height = `${divWidthHeight}px`;
-    div.style.border = '1px solid plum';
+    // div.style.border = '1px solid rgba(0,0,0,0.1';
     container.appendChild(div);
   }
 }
 
 gridInit(16);
 
-let divs = document.getElementsByClassName('divs');
-
 blackBtn.addEventListener('click', () => {
   Array.from(divs).forEach(element => {
     element.addEventListener('mouseenter', () => {
-      element.style.backgroundColor = 'rgba(0,0,0,0.85)';
-      // element.classList.add('divsBlack');
+      element.classList.add('divsBlack');
     });
   });
 });
@@ -69,28 +66,7 @@ colorPicker.addEventListener('change', (e) => {
   });
 });
 
-// newGridBtn.addEventListener('click', () => {
-//   const gridNr = prompt('Enter number between 1 and 100 for grid cells on each side');
-//   container.replaceChildren();
-//   if (gridNr > 0 && gridNr < 100) {
-//     let widthOfDiv = 600 / gridNr;
-//     for (let i = 0; i < gridNr * gridNr; i++) {
-//       div = document.createElement('div');
-//       div.style.width = `${widthOfDiv}px`;
-//       div.style.height = `${widthOfDiv}px`;
-//       div.id = `div${i}`;
-//       div.className = 'divs';
-//       div.style.border = '1px solid plum';
-//       container.appendChild(div);
-//     } 
-//   } else {
-//     alert('Please enter number between 1 and 100');
-    
-//     gridInit(16);
-//   }
-// });
-
 slider.addEventListener('input', (e) => {
   container.replaceChildren();
   gridInit(e.target.value);
-});
+}); 

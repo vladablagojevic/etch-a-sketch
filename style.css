@@ -26,7 +26,7 @@ body {
   height: 100%;
   box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
   background-color: white;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #gridContainer {
@@ -42,7 +42,8 @@ body {
   justify-content: space-between;
   height: 400px;
   margin-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #colorPickerContainer {
@@ -54,6 +55,7 @@ body {
 #colorPicker {
   width: 100px;
   height: 20px;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
@@ -64,6 +66,7 @@ button {
   height: 50px;
   border-radius: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 #blackBtn {
@@ -76,6 +79,10 @@ button {
 #blackBtn:hover {
   background-color: black;
   border: 3px solid whitesmoke;
+}
+
+.divsBlack {
+  background-color: rgba(0,0,0);
 }
 
 #rgbBtn {
@@ -104,8 +111,22 @@ button {
   border: 3px solid silver;
 }
 
+#heading {
+  color: #663399;
+  margin-bottom: 40px;
+}
+
 .slidecontainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:  #663399;
+}
+
+#sliderCounter {
+  margin-top: 10px;
 }
 
 .slider {
@@ -149,8 +170,4 @@ button {
 #newGridBtn:hover {
   background-color: 	#9370DB;
   border: 3px solid #7B68EE;
-}
-
-.divsBlack {
-  background-color: rgba(0,0,0,0.25);
 }

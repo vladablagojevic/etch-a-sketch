@@ -12,21 +12,26 @@
 <body>
   <div id="gridContainer">
     <!-- <button id="newGridBtn">Make new grid</button> -->
+    <div id="heading">
+      <h1>Etch-A-Sketch</h1>
+    </div>
+
     <div class="slidecontainer">
       <input type="range" min="1" max="100" value="16" class="slider" id="gridRange">
+      <div id="sliderCounter"></div>
     </div>
     
     <div id="container"></div>
   </div>
 
   <div id="btnContainer">
-    <button id="blackBtn">Black</button>
-    <button id="rgbBtn">Colorful</button>
-    <button id="eraseAllBtn">Clear</button>
-    <button id="eraseOneByOne">Eraser</button>
+    <button id="blackBtn" class="btns">Black</button>
+    <button id="rgbBtn" class="btns">Colorful</button>
+    <button id="eraseAllBtn" class="btns">Clear</button>
+    <button id="eraseOneByOne" class="btns">Eraser</button>
     <div id="colorPickerContainer">
       <label for="colorPicker">Pick:</label>
-      <input type="color" id="colorPicker">
+      <input type="color" id="colorPicker" value="#663399">
     </div>
   </div>
 </body>
